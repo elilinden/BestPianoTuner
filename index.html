@@ -33,52 +33,54 @@
 
   <section class="features">
     <div class="container">
-      <h2>Features</h2>
+      <h2 class="fade-in">Features</h2>
+      <p class="section-subtitle fade-in">Everything you need to tune your piano like a pro.</p>
+      <hr class="section-divider fade-in">
       <div class="features-grid">
 
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <span class="feature-icon" aria-hidden="true">🎯</span>
           <h3>Accurate Pitch Detection</h3>
           <p>Real-time chromatic tuning with visual feedback so you always know when a note is in tune.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <span class="feature-icon" aria-hidden="true">📋</span>
           <h3>Guided Tuning Sessions</h3>
           <p>Step-by-step instructions for all 88 keys, perfect for your first time tuning.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <span class="feature-icon" aria-hidden="true">🎹</span>
           <h3>Multiple Modes</h3>
           <p>Single note, quick touch-up, full tuning, and unison helper — pick the mode that fits your needs.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <span class="feature-icon" aria-hidden="true">📷</span>
           <h3>AR Pin Finder</h3>
           <p>Use your camera to identify tuning pins inside your piano with augmented reality.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <span class="feature-icon" aria-hidden="true">🎓</span>
           <h3>Learn Mode</h3>
           <p>Ear training, temperament lessons, and a tuning glossary to build your knowledge.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <span class="feature-icon" aria-hidden="true">🗂️</span>
           <h3>Piano Profiles</h3>
           <p>Save multiple pianos with tuning history and health tracking for each instrument.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <span class="feature-icon" aria-hidden="true">📈</span>
           <h3>Custom Stretch Curves</h3>
           <p>Inharmonicity calibration tailored to your specific piano for professional-quality results.</p>
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card fade-in">
           <span class="feature-icon" aria-hidden="true">♿</span>
           <h3>Accessibility</h3>
           <p>Voice guidance, haptic feedback, colorblind-safe colors, and large indicators for everyone.</p>
@@ -88,7 +90,7 @@
     </div>
   </section>
 
-  <section class="compatibility">
+  <section class="compatibility fade-in">
     <div class="container">
       <h2>Compatibility</h2>
       <p>Requires iPhone or iPad running iOS 26 or later.</p>
@@ -104,6 +106,28 @@
     </ul>
     <p>&copy; 2026 Best Piano Tuner. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var els = document.querySelectorAll(".fade-in");
+      if (!("IntersectionObserver" in window)) {
+        els.forEach(function (el) { el.classList.add("visible"); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+      els.forEach(function (el, i) {
+        el.style.transitionDelay = (i * 0.06) + "s";
+        observer.observe(el);
+      });
+    });
+  </script>
 
 </body>
 </html>
