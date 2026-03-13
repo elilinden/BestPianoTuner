@@ -14,6 +14,8 @@
   --color-border: #e5e5e5;
   --color-footer-bg: #111;
   --color-footer-text: #aaa;
+  --color-warn-bg: #fef9ed;
+  --color-warn-border: #f0d78c;
   --max-width: 960px;
   --radius: 16px;
 }
@@ -55,17 +57,6 @@ a:hover {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 .fade-in {
@@ -180,10 +171,13 @@ a:hover {
   animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
 }
 
+.hero-cta {
+  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
 .app-store-badge {
   display: inline-block;
   transition: opacity 0.2s, transform 0.2s;
-  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
 
 .app-store-badge:hover {
@@ -193,6 +187,30 @@ a:hover {
 
 .app-store-badge img {
   height: 54px;
+}
+
+.cta-coming-soon {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 14px 32px;
+  border-radius: 980px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cta-coming-soon:hover {
+  background: var(--color-accent-hover);
+  transform: scale(1.04);
+  text-decoration: none;
+}
+
+.cta-note {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 12px;
 }
 
 /* ── Section divider ── */
@@ -205,9 +223,132 @@ a:hover {
   margin: 0 auto 48px;
 }
 
+/* ── Screenshots ── */
+.screenshots {
+  padding: 80px 0;
+  background: linear-gradient(180deg, var(--color-bg) 0%, #f5f5f7 100%);
+}
+
+.screenshots h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.screenshots .section-subtitle {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.screenshots-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 16px 0 24px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screenshots-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.screenshots-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+.screenshot-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+.screenshot-placeholder {
+  width: 220px;
+  height: 440px;
+  background: linear-gradient(145deg, #e8ecf4, #d5dbe8);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  margin-bottom: 10px;
+}
+
+.screenshot-item figcaption {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+/* ── How It Works ── */
+.how-it-works {
+  padding: 80px 0 96px;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.how-it-works .section-subtitle {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  counter-reset: step;
+}
+
+.step {
+  text-align: center;
+  counter-increment: step;
+  position: relative;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  margin-bottom: 14px;
+}
+
+.step h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
 /* ── Features ── */
 .features {
   padding: 80px 0 96px;
+  background: #f5f5f7;
 }
 
 .features h2 {
@@ -283,6 +424,254 @@ a:hover {
   line-height: 1.55;
 }
 
+/* ── Who It's For ── */
+.who-its-for {
+  padding: 80px 0;
+}
+
+.who-its-for h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.who-its-for .section-subtitle {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.audience-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.audience-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.audience-card .audience-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.audience-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.audience-card p {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  line-height: 1.45;
+}
+
+/* ── What You Need ── */
+.what-you-need {
+  padding: 72px 0;
+  background: #f5f5f7;
+}
+
+.what-you-need h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.what-you-need .section-subtitle {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.needs-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.needs-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.needs-list li:last-child {
+  border-bottom: none;
+}
+
+.needs-list .needs-icon {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  margin-top: 1px;
+}
+
+.needs-list strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.needs-list .needs-detail {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+/* ── Safety & Limits ── */
+.safety {
+  padding: 72px 0;
+}
+
+.safety h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.safety .section-subtitle {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.safety-content {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.warning-box {
+  background: var(--color-warn-bg);
+  border: 1px solid var(--color-warn-border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.warning-box strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.safety-list {
+  list-style: none;
+  margin: 0;
+}
+
+.safety-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  display: flex;
+  gap: 10px;
+}
+
+.safety-list li:last-child {
+  border-bottom: none;
+}
+
+/* ── Privacy at a Glance (landing page) ── */
+.privacy-glance {
+  padding: 72px 0;
+  background: #f5f5f7;
+}
+
+.privacy-glance h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.privacy-glance .section-subtitle {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.privacy-glance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.privacy-glance-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.privacy-glance-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.privacy-glance-card .pg-icon {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.privacy-glance-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.privacy-glance-card p {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ── App CTA block ── */
+.app-cta {
+  padding: 72px 0;
+  text-align: center;
+}
+
+.app-cta h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.app-cta .cta-details {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
 /* ── Compatibility ── */
 .compatibility {
   text-align: center;
@@ -342,7 +731,7 @@ a:hover {
   line-height: 1.75;
 }
 
-.page-content ul {
+.page-content ul, .page-content ol {
   margin: 0 0 14px 24px;
 }
 
@@ -409,11 +798,45 @@ a:hover {
   margin-bottom: 0;
 }
 
+.privacy-section p + p {
+  margin-top: 10px;
+}
+
+/* ── Network disclosure ── */
+.network-disclosure {
+  background: #f0f7ff;
+  border: 1px solid rgba(0, 113, 227, 0.2);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.network-disclosure h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+.network-disclosure ul {
+  margin: 10px 0 0 20px;
+}
+
+.network-disclosure li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
 /* ── FAQ ── */
+.faq-group-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 32px 0 4px;
+  padding-top: 8px;
+}
+
 .faq-item {
   border-bottom: 1px solid var(--color-border);
   padding: 24px 0;
-  transition: background 0.2s;
 }
 
 .faq-item:first-of-type {
@@ -438,6 +861,29 @@ a:hover {
   font-size: 0.95rem;
   line-height: 1.65;
   padding-left: 24px;
+}
+
+/* ── Support checklist ── */
+.checklist-box {
+  background: #f0f7ff;
+  border: 1px solid rgba(0, 113, 227, 0.2);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.checklist-box h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.checklist-box ul {
+  margin: 12px 0 0 20px;
+}
+
+.checklist-box li {
+  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 /* ── Contact card ── */
@@ -510,7 +956,16 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .privacy-summary {
+  .privacy-summary,
+  .privacy-glance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .audience-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -524,5 +979,15 @@ a:hover {
 
   .page-content h1 {
     font-size: 1.8rem;
+  }
+
+  .screenshots h2,
+  .how-it-works h2,
+  .features h2,
+  .who-its-for h2,
+  .what-you-need h2,
+  .safety h2,
+  .privacy-glance h2 {
+    font-size: 1.7rem;
   }
 }

@@ -4,7 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Best Piano Tuner</title>
-  <meta name="description" content="Privacy Policy for Best Piano Tuner, a piano tuning app for iPhone and iPad. No data collection, no tracking, everything stays on your device.">
+  <meta name="description" content="Privacy Policy for Best Piano Tuner. No personal data collection, no tracking, on-device processing. Optional Climate Check uses Open-Meteo for weather data.">
+  <link rel="canonical" href="https://elilinden.github.io/BestPianoTuner/privacy.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy Policy — Best Piano Tuner">
+  <meta property="og:description" content="Privacy Policy for Best Piano Tuner. No data collection, no tracking, on-device processing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elilinden.github.io/BestPianoTuner/privacy.html">
+  <meta property="og:image" content="https://elilinden.github.io/BestPianoTuner/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Privacy Policy — Best Piano Tuner">
+  <meta name="twitter:description" content="Privacy Policy for Best Piano Tuner. No data collection, no tracking, on-device processing.">
+
+  <!-- Favicon / Apple Touch Icon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,25 +48,28 @@
       <div class="privacy-summary">
         <div class="privacy-card">
           <span class="privacy-icon" aria-hidden="true">🔒</span>
-          <h3>No Data Collection</h3>
-          <p>We collect zero personal information.</p>
+          <h3>No Personal Data</h3>
+          <p>We do not collect, store, or transmit personal information.</p>
         </div>
         <div class="privacy-card">
           <span class="privacy-icon" aria-hidden="true">📵</span>
           <h3>No Tracking</h3>
-          <p>No analytics, ads, or third-party services.</p>
+          <p>No analytics, ads, or third-party tracking services.</p>
         </div>
         <div class="privacy-card">
           <span class="privacy-icon" aria-hidden="true">📱</span>
-          <h3>On-Device Only</h3>
-          <p>All data stays on your iPhone or iPad.</p>
+          <h3>On-Device Processing</h3>
+          <p>Core tuning features work entirely on your device, with no internet required.</p>
         </div>
         <div class="privacy-card">
-          <span class="privacy-icon" aria-hidden="true">🌐</span>
-          <h3>No Servers</h3>
-          <p>Nothing is sent over the internet.</p>
+          <span class="privacy-icon" aria-hidden="true">🌤️</span>
+          <h3>One Optional Network Feature</h3>
+          <p>Climate Check can fetch weather data over the internet if you use it.</p>
         </div>
       </div>
+
+      <h2>Offline by Default</h2>
+      <p>All core tuning features — pitch detection, guided tuning sessions, AR Pin Finder, Learn Mode, piano profiles, calibration, and stretch curves — work entirely offline with no internet connection required. The App does not require an account, login, or sign-up.</p>
 
       <h2>Device Permissions</h2>
       <p>The App requests a few permissions to function. Here's exactly what each one does and why:</p>
@@ -65,20 +86,44 @@
 
       <div class="privacy-section">
         <h3>📍 Location (Optional)</h3>
-        <p>If you enable it, location data is used only to estimate local temperature and humidity for the Climate Check feature. <strong>Location data is not stored or shared</strong>. This permission is entirely optional and the app works fully without it.</p>
+        <p>If you enable it, location data is used only by the Climate Check feature to estimate local temperature and humidity. See the "Online Features" section below for details on how location data is handled.</p>
+        <p>This permission is entirely optional. The app works fully without it.</p>
       </div>
 
-      <h2>Data Storage</h2>
-      <p>All app data — including piano profiles, tuning history, and settings — is stored locally on your device using Apple's on-device storage frameworks. No data is synced to external servers or cloud services.</p>
+      <h2>Online Features</h2>
+      <div class="network-disclosure">
+        <h3>🌤️ Climate Check — Weather Data Lookup</h3>
+        <p>The Climate Check feature fetches local temperature and humidity data so you can assess how environmental conditions may affect your piano's tuning stability. Here is exactly what happens when you use this feature:</p>
+        <ul>
+          <li><strong>What is sent:</strong> Your approximate latitude and longitude coordinates are sent to the weather provider to retrieve local conditions.</li>
+          <li><strong>When it is sent:</strong> Only when you actively open or refresh the Climate Check screen. No background requests are made.</li>
+          <li><strong>Which provider:</strong> Weather data is fetched from <strong>Open-Meteo</strong> (<a href="https://open-meteo.com" rel="noopener">open-meteo.com</a>), a free, open-source weather API.</li>
+          <li><strong>What Open-Meteo receives:</strong> Your approximate coordinates and the weather data request. Open-Meteo's own privacy policy applies to their handling of this data. We encourage you to review it at <a href="https://open-meteo.com/en/terms" rel="noopener">open-meteo.com/en/terms</a>.</li>
+          <li><strong>What we store:</strong> We do not operate any servers. We do not store, log, or retain any weather lookup data or location coordinates. The weather result is displayed in the app and not persisted.</li>
+          <li><strong>Is it optional?</strong> Yes. Climate Check is entirely optional. You can skip it entirely and all tuning features will work normally. If you deny location permission, the feature is simply unavailable.</li>
+        </ul>
+        <p>This is the <strong>only feature</strong> in Best Piano Tuner that makes a network request. All other features work completely offline.</p>
+      </div>
+
+      <h2>Local Data Storage</h2>
+      <p>All app data — including piano profiles, tuning history, session results, calibration data, and settings — is stored locally on your device using Apple's on-device storage frameworks (such as SwiftData or UserDefaults). This data is:</p>
+      <ul>
+        <li>Stored only on your iPhone or iPad</li>
+        <li>Not synced to any external server or cloud service operated by us</li>
+        <li>Fully under your control — you can delete it at any time by removing the app</li>
+      </ul>
 
       <h2>Third-Party Services</h2>
-      <p>Best Piano Tuner does not integrate with any third-party analytics, advertising, crash reporting, or tracking services. The App makes no network requests.</p>
+      <p>Best Piano Tuner does not use any third-party analytics, advertising, crash reporting, or tracking SDKs. The only external service the App communicates with is the Open-Meteo weather API, and only when you use the Climate Check feature.</p>
 
       <h2>Children's Privacy</h2>
-      <p>The App does not collect personal information from any user, including children under the age of 13. Because no data is collected, the App complies with COPPA (Children's Online Privacy Protection Act) by design.</p>
+      <p>The App does not collect personal information from any user, including children under the age of 13. Because no personal data is collected, the App complies with COPPA (Children's Online Privacy Protection Act) by design.</p>
 
       <h2>Your Rights</h2>
-      <p>Since Best Piano Tuner does not collect or process any personal data, there is no personal data to access, correct, export, or delete. You are in full control of all data stored on your device and can delete it at any time by removing the app.</p>
+      <p>Since Best Piano Tuner does not collect or process any personal data on our end, there is no personal data for us to access, correct, export, or delete. All data stored by the app lives on your device and is fully under your control. You can delete all app data at any time by removing the app from your device.</p>
+
+      <h2>App Store Privacy Labels</h2>
+      <p>Our App Store privacy answers reflect this policy. If you notice a discrepancy between this page and the App Store privacy labels, please contact us so we can correct it.</p>
 
       <h2>Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this page periodically.</p>
@@ -95,7 +140,6 @@
     <ul class="footer-links">
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="support.html">Support</a></li>
-      <li><a href="https://apps.apple.com/app/best-piano-tuner">App Store</a></li>
     </ul>
     <p>&copy; 2026 Best Piano Tuner. All rights reserved.</p>
   </footer>

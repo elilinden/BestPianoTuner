@@ -4,7 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support — Best Piano Tuner</title>
-  <meta name="description" content="Get help with Best Piano Tuner. Frequently asked questions and contact information.">
+  <meta name="description" content="Get help with Best Piano Tuner. Troubleshooting guides, frequently asked questions, and contact information.">
+  <link rel="canonical" href="https://elilinden.github.io/BestPianoTuner/support.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Support — Best Piano Tuner">
+  <meta property="og:description" content="Get help with Best Piano Tuner. Troubleshooting, FAQs, and contact information.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elilinden.github.io/BestPianoTuner/support.html">
+  <meta property="og:image" content="https://elilinden.github.io/BestPianoTuner/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Support — Best Piano Tuner">
+  <meta name="twitter:description" content="Get help with Best Piano Tuner. Troubleshooting, FAQs, and contact.">
+
+  <!-- Favicon / Apple Touch Icon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,41 +41,157 @@
   <main class="page-content">
     <div class="container">
       <h1>Support</h1>
-      <p>Need help with Best Piano Tuner? We're here to help.</p>
+      <p class="last-updated">Last updated: March 13, 2026 &middot; App version 1.0</p>
 
-      <h2>Frequently Asked Questions</h2>
+      <p>Need help with Best Piano Tuner? Browse the troubleshooting guides and FAQs below, or contact us directly.</p>
 
+      <!-- ── Microphone & Pitch Detection ── -->
+      <h2 class="faq-group-title">Microphone &amp; Pitch Detection</h2>
       <dl>
         <div class="faq-item">
           <dt>The tuner isn't detecting my note accurately.</dt>
-          <dd>Make sure you're in a quiet room and your iPhone is within 1–2 feet of the piano. Avoid background noise like fans or air conditioning. If using an older device, try placing it closer to the strings.</dd>
+          <dd>Make sure you're in a quiet room and your iPhone is within 1–2 feet of the piano. Turn off fans, air conditioning, and TVs. If using an older device, try placing it closer to the strings. Avoid striking the key too hard — a moderate, sustained strike gives the best reading.</dd>
         </div>
-
         <div class="faq-item">
-          <dt>Which tuning mode should I use?</dt>
-          <dd>If you're new to piano tuning, start with Single Note mode to get comfortable. Use Quick Touch-Up to fix a few problem notes. Use Full Tuning for a complete guided session through all 88 keys.</dd>
+          <dt>The app says microphone access is denied.</dt>
+          <dd>Go to Settings &gt; Privacy &amp; Security &gt; Microphone on your device and make sure Best Piano Tuner is enabled. The app cannot detect pitch without microphone access. If the toggle is missing, try deleting and reinstalling the app, then grant permission when prompted.</dd>
         </div>
+        <div class="faq-item">
+          <dt>The pitch reading is jumpy or unstable.</dt>
+          <dd>This usually means background noise is interfering. Close windows, turn off appliances, and move away from other sound sources. Also make sure you're only playing one note at a time — use rubber mutes to silence adjacent strings if needed.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Can I use an external microphone?</dt>
+          <dd>The app uses whatever microphone iOS provides as the default input. If you connect an external mic, iOS should route audio through it automatically. For most users, the built-in iPhone microphone works well.</dd>
+        </div>
+      </dl>
 
+      <!-- ── AR Pin Finder ── -->
+      <h2 class="faq-group-title">AR Pin Finder</h2>
+      <dl>
         <div class="faq-item">
           <dt>What does the AR Pin Finder do?</dt>
-          <dd>It uses your camera to help you identify which tuning pin belongs to which note inside the piano. Open the piano lid, point your camera at the tuning pins, and the app will try to detect and map them.</dd>
+          <dd>It uses your camera and augmented reality to help you identify which tuning pin belongs to which note inside the piano. Open the piano lid, point your camera at the tuning pins, and the app will try to detect and map them.</dd>
         </div>
+        <div class="faq-item">
+          <dt>The AR Pin Finder isn't detecting pins.</dt>
+          <dd>Make sure the piano lid is fully open and the tuning pins are clearly visible. Good lighting is essential — avoid dim rooms or strong backlighting. Hold your device steady, about 12–18 inches from the pins. The feature works best on grand pianos and open-top uprights.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Camera access is denied.</dt>
+          <dd>Go to Settings &gt; Privacy &amp; Security &gt; Camera and enable Best Piano Tuner. The AR Pin Finder requires camera access. If the toggle is missing, reinstall the app and grant permission when prompted.</dd>
+        </div>
+      </dl>
 
+      <!-- ── Climate Check & Weather ── -->
+      <h2 class="faq-group-title">Climate Check &amp; Weather</h2>
+      <dl>
+        <div class="faq-item">
+          <dt>Climate Check says it can't load weather data.</dt>
+          <dd>Climate Check needs an internet connection and location access to fetch temperature and humidity. Check that you have cellular or Wi-Fi connectivity, and that location permission is enabled in Settings &gt; Privacy &amp; Security &gt; Location Services &gt; Best Piano Tuner. If the problem persists, the weather service (Open-Meteo) may be temporarily unavailable.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Do I need Climate Check to tune my piano?</dt>
+          <dd>No. Climate Check is entirely optional. It shows temperature and humidity to help you understand environmental factors that affect tuning stability, but all tuning features work without it.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Does Climate Check share my location?</dt>
+          <dd>When you use Climate Check, your approximate coordinates are sent to Open-Meteo to fetch local weather. No location data is stored by us. See the <a href="privacy.html">Privacy Policy</a> for full details.</dd>
+        </div>
+      </dl>
+
+      <!-- ── Tuning Modes ── -->
+      <h2 class="faq-group-title">Tuning Modes</h2>
+      <dl>
+        <div class="faq-item">
+          <dt>Which tuning mode should I use?</dt>
+          <dd><strong>Single Note:</strong> Best for checking or adjusting one specific note.<br>
+          <strong>Quick Touch-Up:</strong> Fix a few problem notes without doing a full pass.<br>
+          <strong>Full Tuning:</strong> A complete guided session through all 88 keys — best for a thorough tuning.<br>
+          <strong>Unison Helper:</strong> Fine-tune the unison strings for a single note after pitch is set.<br>
+          If you're new, start with Single Note to get comfortable with the tuning lever before attempting a full session.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>What's the difference between Full Tuning and Quick Touch-Up?</dt>
+          <dd>Full Tuning walks you through every note in a professional tuning order. Quick Touch-Up lets you jump to specific notes that sound off without doing the full sequence. Use Full Tuning for best results; use Quick Touch-Up for maintenance between full sessions.</dd>
+        </div>
+      </dl>
+
+      <!-- ── Calibration & Stretch Curves ── -->
+      <h2 class="faq-group-title">Calibration &amp; Stretch Curves</h2>
+      <dl>
+        <div class="faq-item">
+          <dt>What are custom stretch curves?</dt>
+          <dd>Piano strings have inharmonicity — their overtones are slightly sharper than mathematically perfect. A stretch curve compensates for this by adjusting target pitches across the keyboard. The app can calculate a curve specific to your piano for more natural-sounding results.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Do I need to calibrate my piano?</dt>
+          <dd>Calibration is optional but recommended for Full Tuning sessions. The app uses a reasonable default curve, but measuring your piano's actual inharmonicity produces better results, especially in the bass and treble registers.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Is A4 = 440 Hz the only reference pitch?</dt>
+          <dd>The app defaults to A4 = 440 Hz but allows you to adjust the reference pitch in settings if needed.</dd>
+        </div>
+      </dl>
+
+      <!-- ── Piano Profiles & History ── -->
+      <h2 class="faq-group-title">Piano Profiles &amp; Session History</h2>
+      <dl>
+        <div class="faq-item">
+          <dt>Can I save multiple pianos?</dt>
+          <dd>Yes. Create a profile for each piano you tune. Each profile stores its own tuning history, calibration data, and health metrics so you can track changes over time.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Where is my data stored?</dt>
+          <dd>All data is stored locally on your device. Nothing is uploaded to any server. If you delete the app, all saved profiles and history are removed.</dd>
+        </div>
+      </dl>
+
+      <!-- ── When to Call a Professional ── -->
+      <h2 class="faq-group-title">When to Call a Professional</h2>
+      <dl>
+        <div class="faq-item">
+          <dt>When should I stop and call a professional tuner?</dt>
+          <dd>Consider hiring a professional if:
+            <br>• Your piano hasn't been tuned in more than 2 years
+            <br>• The pitch is more than a semitone flat across the keyboard
+            <br>• You hear buzzing, rattling, or dead notes that aren't pitch-related
+            <br>• A string breaks during tuning
+            <br>• Tuning pins feel very loose or won't hold pitch
+            <br>• You're unsure about any step — it's always better to stop and ask
+            <br><br>Best Piano Tuner is designed for maintenance tuning and learning. A professional technician has the training and tools to handle structural issues safely.</dd>
+        </div>
+      </dl>
+
+      <!-- ── General ── -->
+      <h2 class="faq-group-title">General</h2>
+      <dl>
         <div class="faq-item">
           <dt>Do I need special equipment?</dt>
           <dd>You need a tuning lever (also called a tuning hammer) and rubber or felt mutes. The app replaces the electronic tuning device but not the physical tools.</dd>
         </div>
-
-        <div class="faq-item">
-          <dt>Can this app damage my piano?</dt>
-          <dd>The app includes built-in safety warnings and beginner-friendly workflows. However, improper tuning technique can damage strings or pins. If your piano is severely out of tune or hasn't been tuned in years, we recommend hiring a professional for the first tuning.</dd>
-        </div>
-
         <div class="faq-item">
           <dt>Does the app work offline?</dt>
-          <dd>Yes. Best Piano Tuner works entirely offline. No internet connection is required.</dd>
+          <dd>All core features — pitch detection, guided tuning, AR Pin Finder, Learn Mode, profiles, and calibration — work entirely offline with no internet connection. The only feature that requires internet is Climate Check, which fetches weather data.</dd>
+        </div>
+        <div class="faq-item">
+          <dt>Can this app damage my piano?</dt>
+          <dd>The app includes built-in safety warnings and beginner-friendly workflows. However, improper tuning technique can damage strings or pins. If your piano is severely out of tune or hasn't been tuned in years, we recommend hiring a professional for the first tuning. See the <a href="index.html#safety">Safety &amp; Limitations</a> section on the home page.</dd>
         </div>
       </dl>
+
+      <!-- ── Before You Email ── -->
+      <div class="checklist-box">
+        <h3>Before You Contact Support</h3>
+        <p>To help us resolve your issue quickly, please include:</p>
+        <ul>
+          <li><strong>Device model</strong> (e.g., iPhone 15 Pro, iPad Air M2)</li>
+          <li><strong>iOS version</strong> (e.g., iOS 26.0)</li>
+          <li><strong>App version</strong> (found in the app's settings screen)</li>
+          <li><strong>Steps to reproduce</strong> — what you did, what you expected, and what happened instead</li>
+          <li><strong>Screenshots</strong> if applicable</li>
+        </ul>
+      </div>
 
       <div class="contact-card">
         <h2>Contact Us</h2>
@@ -72,7 +206,6 @@
     <ul class="footer-links">
       <li><a href="privacy.html">Privacy Policy</a></li>
       <li><a href="support.html">Support</a></li>
-      <li><a href="https://apps.apple.com/app/best-piano-tuner">App Store</a></li>
     </ul>
     <p>&copy; 2026 Best Piano Tuner. All rights reserved.</p>
   </footer>
